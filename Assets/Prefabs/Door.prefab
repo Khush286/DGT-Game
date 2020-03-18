@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49ff256524137f418783c90591a9ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 3378054142685200322, guid: 93b42774e0f460941b9c2e659b9096d0, type: 3}
+  doorID: 0
+  roomToAccess: 0
+  correspondingDoor: 0
 --- !u!58 &4474413892647790088
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
+    [SerializeField] GameObject player;
     [SerializeField] int doorID = 0;
     [SerializeField] int roomToAccess = 0;
     [SerializeField] int correspondingDoor = 0;
@@ -16,7 +17,8 @@ public class Door : MonoBehaviour
             Debug.Log("Door was touched");
             SceneManager.LoadScene(roomToAccess);
             GameObject.FindGameObjectWithTag("Door");
-            TeleportPlayer();
+            //TeleportPlayer();
+            SceneManager.MoveGameObjectToScene(player, SceneManager.GetActiveScene(roomToAccess));
 
         }
     }

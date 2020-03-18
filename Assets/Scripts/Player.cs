@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        //DontDestroyOnLoad(gameObject);
         SetUpMoveBoundaries();
     }
 
@@ -34,10 +35,10 @@ public class Player : MonoBehaviour
 
     }
 
-    public void TeleportPlayer()
-    {
-        Instantiate(player, new Vector3(i * 2.0F, 0, 0), Quaternion.identity);
-    }
+    //public void TeleportPlayer()
+    //{
+        
+    //}
 
     public void AmIMoving()
     {
