@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Move();
+       // Move();
         LookAtMouse();
         AmIMoving();
 
