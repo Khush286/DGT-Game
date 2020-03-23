@@ -20,12 +20,12 @@ public class Player : MonoBehaviour
         if (other.tag == "Door")
         {
             int nextScene = other.GetComponent<Door>().roomToAccess;
-            //rb.position = Vector2.zero;
             SceneManager.LoadScene(nextScene);
-            //CoreGame.SpawnPlayer();
             Destroy(gameObject);
         }
     }
+
+
     /* float AngleBetweenPoints(Vector2 a, Vector2 b) // Formula for finding the angle between two points
     {
         return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
