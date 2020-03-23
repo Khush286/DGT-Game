@@ -24,8 +24,6 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(nextScene);
             //CoreGame.SpawnPlayer();
             Destroy(gameObject);
-
-
         }
     }
     /* float AngleBetweenPoints(Vector2 a, Vector2 b) // Formula for finding the angle between two points
