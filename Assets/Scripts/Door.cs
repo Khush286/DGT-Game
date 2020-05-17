@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] int doorID = 0;
     public int roomToAccess = 0;
-    [SerializeField] int correspondingDoor = 0;
 }
 
 

@@ -6,30 +6,63 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/RoomA.unity
+    path: Assets/Scenes/Room0.unity
     guid: 3f70fa671c7f3be4295aab5dfa8b6c0e
   - enabled: 1
-    path: Assets/Scenes/RoomB.unity
-    guid: af511cdf1dcdbb44e86b6279e315e497
+    path: Assets/Scenes/Room1.unity
+    guid: f6fe53e2dd961a74ebe084442e4773e9
   - enabled: 1
-    path: Assets/Scenes/RoomC.unity
-    guid: 4f1583719c499904bb5906694e8212ed
+    path: Assets/Scenes/Room2.unity
+    guid: f71fa4af3e931c14485a6e5b71a99f59
   - enabled: 1
-    path: Assets/Scenes/RoomD.unity
-    guid: 2052572e71b086640993a690b3d6f683
+    path: Assets/Scenes/Room3.unity
+    guid: 16030da524bfd5047b18ff6313cf8624
   - enabled: 1
-    path: Assets/Scenes/RoomE.unity
-    guid: f81c15aa492e4d54289902544b148995
+    path: Assets/Scenes/Room4.unity
+    guid: 21f343a34d97e8542bce06020bbafb7f
   - enabled: 1
-    path: Assets/Scenes/RoomF.unity
-    guid: 815f29204e07147489409cd5db872500
+    path: Assets/Scenes/Room5.unity
+    guid: 12e454d35ade83a4a8ecb48080b931f1
   - enabled: 1
-    path: Assets/Scenes/RoomG.unity
-    guid: f72698fd0377bac44adaa1ca323ec93a
+    path: Assets/Scenes/Room6.unity
+    guid: 661b47769cf9c6c4087060c6e0327fa0
   - enabled: 1
-    path: Assets/Scenes/RoomH.unity
-    guid: b6208a99e9e7516498ff0269a47b238d
+    path: Assets/Scenes/Room7.unity
+    guid: a557bbde1b695de448db52d2165210ac
   - enabled: 1
-    path: Assets/Scenes/RoomI.unity
-    guid: b480170360b87c84fa68600b3213d046
+    path: Assets/Scenes/Room8.unity
+    guid: 28a2fd3d9863f394fa8d8fb1baa3067e
+  - enabled: 1
+    path: Assets/Scenes/Room9.unity
+    guid: 16b0d50714e6e3a48921c5fbb5deffad
+  - enabled: 1
+    path: Assets/Scenes/Room10.unity
+    guid: 8ecd8ac8971b36e4192da6e2a7530dd2
+  - enabled: 1
+    path: Assets/Scenes/Room11.unity
+    guid: e37317f88e64b18469e9fd60dbdaa917
+  - enabled: 1
+    path: Assets/Scenes/Room12.unity
+    guid: f0d6596a059e6c847aef26b4722c47fd
+  - enabled: 1
+    path: Assets/Scenes/Room13.unity
+    guid: 65f40d1251121874384fd35db74e4c62
+  - enabled: 1
+    path: Assets/Scenes/Room14.unity
+    guid: a956b88d5be22e94aacb8e172aa0e6b0
+  - enabled: 1
+    path: Assets/Scenes/Room15.unity
+    guid: 9ada4f87dd956dc4693499e36c07729a
+  - enabled: 1
+    path: Assets/Scenes/Room16.unity
+    guid: 901e43ada73e3954796195827dc954f3
+  - enabled: 1
+    path: Assets/Scenes/Room17.unity
+    guid: 7482605afd1a7df4d941a8394b1a3068
+  - enabled: 1
+    path: Assets/Scenes/Room18.unity
+    guid: 3879aa95d1b5a2645a4a6a2d9030d658
+  - enabled: 1
+    path: Assets/Scenes/Room19.unity
+    guid: 864dace0f9487ce43adbcb315bbe7a6f
   m_configObjects: {}

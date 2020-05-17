@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     Vector2 movement;
-
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
