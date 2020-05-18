@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class RoomText : MonoBehaviour
 {
-    private void Update()
+    string currentRoom = "";
+
+    private void Start()
     {
-        GetComponent<TextMesh>().text = "new Text u want";
+        currentRoom = SceneManager.GetActiveScene().name;
+        GetComponent<Text>().text = currentRoom;
     }
 }
