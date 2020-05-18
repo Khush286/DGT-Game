@@ -12,6 +12,6 @@ public class RoomText : MonoBehaviour
     private void Start()
     {
         currentRoom = SceneManager.GetActiveScene().name;
-        GetComponent<Text>().text = currentRoom;
+        GetComponent<Text>().text = currentRoom ;
     }
 }
