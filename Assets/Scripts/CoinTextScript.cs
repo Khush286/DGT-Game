@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CoinTextScript : MonoBehaviour
 {
     Text text;
-    public static int coinAmount;
+    [SerializeField] public static int coinAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,6 @@ public class CoinTextScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "Coins: " + coinAmount.ToString();
+        text.text = "Coins: " + coinAmount.ToString() + "/30";
     }
 }

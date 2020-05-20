@@ -15,14 +15,16 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(nextScene);
             Destroy(gameObject);
         }
-    }
-    /* public void AmIMoving()
-    {
-        if (transform.hasChanged)
+
+        else if (other.tag == "LockedDoor" && CoinTextScript.coinAmount >= 30)
         {
-            // moving
-            return;
+                int nextScene = other.GetComponent<Door>().roomToAccess;
+                SceneManager.LoadScene(nextScene);
+                Destroy(gameObject);
         }
-    } */
+    }
+
+
+ 
 
 }
