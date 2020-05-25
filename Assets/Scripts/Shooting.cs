@@ -13,49 +13,51 @@ public class Shooting : MonoBehaviour
 
     public int Shot;
     public bool canShoot;
-    public float delayInSeconds;
+    public float time = 5f;
 
-    private var shotFired = false;
-    int time = 2;
 
-    function FireShot()
+    public void Update()
     {
-        if(Input.GetKey(KeyCode.UpArrow))
+        if (canShoot)
+        {
+            StartCoroutine(shoot());
+        }
+    }
+
+    public IEnumerator shoot()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
         {
            var go = Instantiate(projectile, spellEmitterUp.position, transform.rotation) as GameObject;
            go.AddComponent<ProjectileUp>();
+             
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
             var go = Instantiate(projectile, spellEmitterDown.position, transform.rotation) as GameObject;
             go.AddComponent<ProjectileDown>();
+             
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             var go = Instantiate(projectile, spellEmitterLeft.position, transform.rotation) as GameObject;
             go.AddComponent<ProjectileLeft>();
+             
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
             var go = Instantiate(projectile, spellEmitterRight.position, transform.rotation) as GameObject;
             go.AddComponent<ProjectileRight>();
+             
         }
+        canShoot = false;
+        yield return new WaitForSeconds(time);
+        canShoot = true;
 
-        yield WaitForSeconds(time);
-        shotFired = false;
-
-        function Update()
-        {
-            if ((!shotFired) && (Input.GetKey(KeyCode.LeftArrow))
-            {
-                // immediately set the shot flag so another shot can not be made
-                shotFired = true;
-                FireShot();
-            }
-        }
     }
+
 
 }

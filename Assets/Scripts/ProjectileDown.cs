@@ -15,5 +15,9 @@ public class ProjectileDown : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        DestroyProjectile();
+    }
 
 }
