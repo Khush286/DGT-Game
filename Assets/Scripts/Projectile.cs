@@ -5,23 +5,10 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public void ShootUp()
+    public float thrust = 1.0f;
+    void Update()
     {
-
+        transform.Translate(Vector3.up * Time.deltaTime * 5);
     }
 
-    public void ShootDown()
-    {
-
-    }
-
-    public void ShootLeft()
-    {
-
-    }
-
-    public void ShootRight()
-    {
-
-    }
 }

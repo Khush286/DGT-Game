@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 7060640995798761175}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.10133937, y: -2.02, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 706349003}
   - {fileID: 7262439167242709730}
@@ -319,5 +319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 4110347892646179670, guid: 4802eb3f88d79aa43a34071694b989f3,
     type: 3}
-  spellEmitter: {fileID: 706349003}
+  spellEmitterUp: {fileID: 706349003}
+  spellEmitterDown: {fileID: 7262439167242709730}
+  spellEmitterLeft: {fileID: 3706751186742262955}
+  spellEmitterRight: {fileID: 1083684348491333932}
   projectileSpeed: 20
