@@ -11,39 +11,51 @@ public class Shooting : MonoBehaviour
     public Transform spellEmitterRight;
     public float projectileSpeed = 20f;
 
-    private void Update()
-    {        
-        ShootUp();
-        ShootDown();
-        ShootLeft();
-        ShootRight();
-    }
-    private void ShootUp()
+    public int Shot;
+    public bool canShoot;
+    public float delayInSeconds;
+
+    private var shotFired = false;
+    int time = 2;
+
+    function FireShot()
     {
         if(Input.GetKey(KeyCode.UpArrow))
         {
-           GameObject projectileObject = Instantiate(projectile, spellEmitterUp.position, transform.rotation);
+           var go = Instantiate(projectile, spellEmitterUp.position, transform.rotation) as GameObject;
+           go.AddComponent<ProjectileUp>();
         }
-    }
-    private void ShootDown()
-    {
+
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            GameObject projectileObject = Instantiate(projectile, spellEmitterDown.position, transform.rotation);
+            var go = Instantiate(projectile, spellEmitterDown.position, transform.rotation) as GameObject;
+            go.AddComponent<ProjectileDown>();
         }
-    }
-    private void ShootLeft()
-    {
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            GameObject projectileObject = Instantiate(projectile, spellEmitterLeft.position, transform.rotation);
+            var go = Instantiate(projectile, spellEmitterLeft.position, transform.rotation) as GameObject;
+            go.AddComponent<ProjectileLeft>();
         }
-    }
-    private void ShootRight()
-    {
+
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            GameObject projectileObject = Instantiate(projectile, spellEmitterRight.position, transform.rotation);
+            var go = Instantiate(projectile, spellEmitterRight.position, transform.rotation) as GameObject;
+            go.AddComponent<ProjectileRight>();
+        }
+
+        yield WaitForSeconds(time);
+        shotFired = false;
+
+        function Update()
+        {
+            if ((!shotFired) && (Input.GetKey(KeyCode.LeftArrow))
+            {
+                // immediately set the shot flag so another shot can not be made
+                shotFired = true;
+                FireShot();
+            }
         }
     }
+
 }
