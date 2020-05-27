@@ -20,9 +20,10 @@ public class Player : MonoBehaviour
 
         else if (other.tag == "LockedDoor" && CoinTextScript.coinAmount >= 30)
         {
-                int nextScene = other.GetComponent<Door>().roomToAccess;
-                SceneManager.LoadScene(nextScene);
-                Destroy(gameObject);
+            int nextScene = other.GetComponent<Door>().roomToAccess;
+            SceneManager.LoadScene("Room" + nextScene);
+            KeyTextScript.keyAmount -= 1;
+            Destroy(gameObject);
         }
     }
 

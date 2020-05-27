@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class miniMap : MonoBehaviour
 {
-    string currentRoom = "";
+    public string currentRoom = "";
     string objectName = "";
     void Start()
     {
