@@ -17,7 +17,10 @@ public class ProjectileRight : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        DestroyProjectile();
+        if (other.tag == "Walls")
+        {
+            DestroyProjectile();
+        }
     }
 
 }

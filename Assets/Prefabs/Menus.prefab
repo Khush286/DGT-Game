@@ -846,7 +846,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8805615418113902217}
-        m_MethodName: Resume
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -975,7 +975,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8805615418113902217}
-        m_MethodName: LoadMenu
+        m_MethodName: DisplaySettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 8805615417958999465}
-  mainMenuUI: {fileID: 0}
+  mainMenuUI: {fileID: 980081038}
 --- !u!1 &8805615418376672891
 GameObject:
   m_ObjectHideFlags: 0

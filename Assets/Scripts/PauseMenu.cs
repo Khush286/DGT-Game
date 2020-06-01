@@ -59,4 +59,14 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Game was quit");
         Application.Quit();
     }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Room1");
+    }
+
+    public void DisplaySettings()
+    {
+        Debug.Log("Display Settings");
+    }
 }
