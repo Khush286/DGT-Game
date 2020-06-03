@@ -1435,6 +1435,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496353240}
   m_CullTransparentMesh: 0
+--- !u!50 &1749789454 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7060640995798761173, guid: cd42995c4219b5c4b8dee8f133a2bf11,
+    type: 3}
+  m_PrefabInstance: {fileID: 1967245355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1846434711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2165,11 +2171,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749789451, guid: cd42995c4219b5c4b8dee8f133a2bf11, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3491460476756268569, guid: cd42995c4219b5c4b8dee8f133a2bf11,
         type: 3}
-      propertyPath: speed
-      value: 1.8
-      objectReference: {fileID: 0}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1749789454}
     - target: {fileID: 7060640995798761163, guid: cd42995c4219b5c4b8dee8f133a2bf11,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2229,11 +2239,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7060640995798761175, guid: cd42995c4219b5c4b8dee8f133a2bf11,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd42995c4219b5c4b8dee8f133a2bf11, type: 3}

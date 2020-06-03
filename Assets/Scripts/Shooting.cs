@@ -21,6 +21,7 @@ public class Shooting : MonoBehaviour
             timeLastShot = Time.time;
             var go = Instantiate(projectile, spellEmitterUp.position, transform.rotation) as GameObject;
             go.AddComponent<ProjectileUp>();
+            go.AddComponent<ProjectileMain>();
         }
 
         if (Input.GetKey(KeyCode.DownArrow) && (Time.time > timeLastShot + delayBetweenShots))
@@ -28,6 +29,7 @@ public class Shooting : MonoBehaviour
             timeLastShot = Time.time;
             var go = Instantiate(projectile, spellEmitterDown.position, transform.rotation) as GameObject;
             go.AddComponent<ProjectileDown>();
+            go.AddComponent<ProjectileMain>();
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) && (Time.time > timeLastShot + delayBetweenShots))
@@ -35,12 +37,14 @@ public class Shooting : MonoBehaviour
             timeLastShot = Time.time;
             var go = Instantiate(projectile, spellEmitterLeft.position, transform.rotation) as GameObject;
             go.AddComponent<ProjectileLeft>();
+            go.AddComponent<ProjectileMain>();
         }
         if (Input.GetKey(KeyCode.RightArrow) && (Time.time > timeLastShot + delayBetweenShots))
         {
             timeLastShot = Time.time;
             var go = Instantiate(projectile, spellEmitterRight.position, transform.rotation) as GameObject;
             go.AddComponent<ProjectileRight>();
+            go.AddComponent<ProjectileMain>();
         }   
 
     }

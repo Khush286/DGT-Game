@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Room1");
+        SceneManager.LoadScene("Room0");
     }
 
     public void DisplaySettings()

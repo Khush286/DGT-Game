@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     public float speed;
+    public Rigidbody2D rb;
 
     private Transform target;
 
@@ -17,7 +18,7 @@ public class EnemyFollow : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, target.position) > 0.6)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
     }
 

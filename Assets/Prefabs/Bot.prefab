@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 7060640995798761173}
   - component: {fileID: 7060640995798761161}
   - component: {fileID: 3491460476756268569}
-  - component: {fileID: 1189353779649593148}
+  - component: {fileID: 1749789451}
   m_Layer: 8
   m_Name: Bot
-  m_TagString: Player
+  m_TagString: Bot
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6891855}
+  m_Offset: {x: 0, y: -0.59377503}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -150,7 +150,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5558919, y: 0.38533592}
+  m_Size: {x: 0.63188136, y: 0.5761569}
   m_EdgeRadius: 0
 --- !u!114 &3491460476756268569
 MonoBehaviour:
@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56877c4611c43f1408f58a1679cd68d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
---- !u!114 &1189353779649593148
+  speed: 1.8
+--- !u!114 &1749789451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7060640995798761175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e178f19b43a62542b07d566f386a004, type: 3}
+  m_Script: {fileID: 11500000, guid: 90849b586aba241448cea5483acf3d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
