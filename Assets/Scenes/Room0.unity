@@ -1386,8 +1386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25, y: 0.55}
   m_AnchorMax: {x: 0.25, y: 0.55}
-  m_AnchoredPosition: {x: -105.25, y: 0}
-  m_SizeDelta: {x: 189.5, y: 90.44}
+  m_AnchoredPosition: {x: -105.25, y: -45.37}
+  m_SizeDelta: {x: 189.5, y: 181.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496353242
 MonoBehaviour:
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 1921449425}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

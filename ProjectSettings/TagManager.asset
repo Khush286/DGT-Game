@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - LockedDoor
+  - Walls
   layers:
   - Default
   - TransparentFX
