@@ -18,7 +18,7 @@ public class ProjectileMain : MonoBehaviour
         if (other.tag == "Bot")
         {
             Debug.Log("Projectile hit a Bot");
-            other.GetComponent<Rigidbody2D>().AddForce(new Vector2(10,10));
+            // other.GetComponent<Rigidbody2D>().AddForce(new Vector2(10,10)); ADDS KNOCKBACK
         }
     }
 }
