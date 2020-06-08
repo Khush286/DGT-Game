@@ -19,6 +19,7 @@ public class ProjectileMain : MonoBehaviour
         {
             Debug.Log("Projectile hit a Bot");
             // other.GetComponent<Rigidbody2D>().AddForce(new Vector2(10,10)); ADDS KNOCKBACK
+
         }
     }
 }

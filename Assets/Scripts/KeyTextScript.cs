@@ -11,7 +11,6 @@ public class KeyTextScript : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text>();
-        keyAmount = 50;
     }
 
     // Update is called once per frame
