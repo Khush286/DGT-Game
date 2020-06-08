@@ -8,6 +8,19 @@ public class BotMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Animator animator;
+    public int health = 2;
+
+    public void changeHealth()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            health -= 1;
+        }
+    }
 
     Vector2 movement;
     void Update()

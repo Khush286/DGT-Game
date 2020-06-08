@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ProjectileMain : MonoBehaviour
 {
+    private int changeHealth;
+
     void DestroyProjectile()
     {
         Destroy(gameObject);
@@ -17,9 +19,10 @@ public class ProjectileMain : MonoBehaviour
 
         if (other.tag == "Bot")
         {
-            Debug.Log("Projectile hit a Bot");
-            // other.GetComponent<Rigidbody2D>().AddForce(new Vector2(10,10)); ADDS KNOCKBACK
-
+            other.GetComponent<BotMovement>().changeHealth();
+            Invoke("DestroyProjectile", 0.1f);
         }
+
     }
+
 }
