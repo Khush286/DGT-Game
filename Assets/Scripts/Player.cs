@@ -6,8 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public int playerHealth = 3;
     public Rigidbody2D rb;
-    private void OnTriggerEnter2D(Collider2D other) // Waits for door collision, then loads corresponding room
+    private void checkForHealth()
+    {
+        if (playerHealth <= 0)
+        {
+            Destroy(gameObject);
+            // enter gameover menu
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Door" && KeyTextScript.keyAmount >= 1)
         {
@@ -24,6 +34,12 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene("Room" + nextScene);
             KeyTextScript.keyAmount -= 1;
             Destroy(gameObject);
+        }
+        else if (other.name == "PlayerCollider")
+        {
+            playerHealth -= 1;
+            Debug.Log(playerHealth);
+            checkForHealth();
         }
     }
 

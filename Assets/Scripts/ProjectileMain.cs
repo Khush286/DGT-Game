@@ -20,7 +20,7 @@ public class ProjectileMain : MonoBehaviour
         if (other.tag == "Bot")
         {
             other.GetComponent<BotMovement>().changeHealth();
-            Invoke("DestroyProjectile", 0.1f);
+            DestroyProjectile();
         }
 
     }
