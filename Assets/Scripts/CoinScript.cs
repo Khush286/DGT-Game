@@ -10,7 +10,9 @@ public class CoinScript : MonoBehaviour
         {
             CoinTextScript.coinAmount += 1;
             Destroy(gameObject);
+            
         }
       
     }
+    
 }

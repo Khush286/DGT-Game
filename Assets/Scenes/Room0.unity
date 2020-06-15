@@ -5106,6 +5106,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57b00a51565a2eb45b1a52deb4feea08, type: 3}
+--- !u!4 &1024493720 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7060640995798761163, guid: 1b7865662e5d8b44a987581f4b0ab130,
+    type: 3}
+  m_PrefabInstance: {fileID: 7060640995631785210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1175447521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5258,7 +5264,10 @@ MonoBehaviour:
 
 
     Find all the coins to unlock
-    the last room'
+    the last room
+
+
+    Esc to pause the game'
 --- !u!222 &1496353243
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5427,6 +5436,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749789451, guid: cd42995c4219b5c4b8dee8f133a2bf11, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1024493720}
     - target: {fileID: 7060640995798761163, guid: cd42995c4219b5c4b8dee8f133a2bf11,
         type: 3}
       propertyPath: m_LocalPosition.x

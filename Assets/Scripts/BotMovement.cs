@@ -5,9 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class BotMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public Transform target;
+    public float speed = 2f;
+    private float minDistance = 1f;
+    private float range;
+    void Update()
+    {
+        range = Vector2.Distance(transform.position, target.position);
+
+        if (range > minDistance)
+        {
+            Debug.Log(range);
+
+            transform.Translate(Vector2.MoveTowards(transform.position, target.position, range) * speed * Time.deltaTime);
+        }
+    }
+    /*public float moveSpeed = 5f;
     public Rigidbody2D rb;
-    public Animator animator;
+    public Animator animator;*/
     public int health = 2;
 
     public void changeHealth()
@@ -22,7 +37,7 @@ public class BotMovement : MonoBehaviour
         }
     }
 
-    Vector2 movement;
+    /*Vector2 movement;
     void Update()
     {
         movement.x = rb.velocity.x;
@@ -37,5 +52,5 @@ public class BotMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-    }
+    }*/
 }

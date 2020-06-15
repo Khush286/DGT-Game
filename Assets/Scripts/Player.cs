@@ -43,7 +43,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            KeyTextScript.keyAmount += 1;
+        }
 
- 
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            CoinTextScript.coinAmount += 1;
+        }
+    }
+
+
+
+
+
+
 
 }
