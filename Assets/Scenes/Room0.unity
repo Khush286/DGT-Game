@@ -6150,6 +6150,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 769202380166495814, guid: 1b7865662e5d8b44a987581f4b0ab130,
+        type: 3}
+      propertyPath: menuUI
+      value: 
+      objectReference: {fileID: 8805615418510077098}
     - target: {fileID: 7060640995798761163, guid: 1b7865662e5d8b44a987581f4b0ab130,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6336,6 +6341,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5559738e811fb442bac927ed51373ad, type: 3}
+--- !u!1 &8805615418510077098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8805615418113902258, guid: e5559738e811fb442bac927ed51373ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 8805615418510077097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8909681980223151998
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,12 +7,15 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject mainMenuUI;
+    public GameObject gameOverMenuUI;
     public static bool GameIsPaused = false;
+    public static bool GameIsOver = false;
     //public string theCurrentScene;
 
     void Start()
     {
         mainMenuUI.SetActive(false);
+        gameOverMenuUI.SetActive(false);
         Resume();
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
@@ -27,7 +30,7 @@ public class PauseMenu : MonoBehaviour
             {
                 Resume();
             }
-            else
+            else if (!GameIsOver)
             {
                 Pause();
             }
@@ -45,6 +48,12 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+
+    public void GameOver()
+    {
+        gameOverMenuUI.SetActive(true);
+        GameIsOver = true;
     }
 
     public void LoadMenu()
