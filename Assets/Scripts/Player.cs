@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public int playerHealth = 3;
+    public static int playerHealth = 3;
     public Rigidbody2D rb;
     public GameObject menuUI;
+
     private void checkForHealth()
     {
         if (playerHealth <= 0)

@@ -23,7 +23,6 @@ public class miniMap : MonoBehaviour
     {
         if ( objectName == currentRoom)
         {
-
             gameObject.GetComponent<Image>().color = Color.green;
         }
         else
