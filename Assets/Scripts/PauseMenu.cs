@@ -71,6 +71,7 @@ public class PauseMenu : MonoBehaviour
 
     public void StartGame()
     {
+        Player.playerHealth = 3;
         SceneManager.LoadScene("Room0");
     }
 
