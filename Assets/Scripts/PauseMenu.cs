@@ -5,15 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenuUI;
-    public GameObject mainMenuUI;
-    public GameObject gameOverMenuUI;
+    public GameObject pauseMenuUI; // UI for pausing
+    public GameObject mainMenuUI; // UI for the main menu
+    public GameObject gameOverMenuUI; // UI for the game over screen
+    public GameObject settingsUI;
     public static bool GameIsPaused = false;
     public static bool GameIsOver = false;
-    //public string theCurrentScene;
+    public static bool SettingsIsDisplayed = false;
+    public static bool CheatsEnabled = false;
 
     void Start()
     {
+        gameobject.transform.Find("Settings");
+        settingsUI.SetActive(false);
+        SettingsIsDisplayed = false;
+        GameIsOver = (false);
         mainMenuUI.SetActive(false);
         gameOverMenuUI.SetActive(false);
         Resume();
@@ -22,6 +28,7 @@ public class PauseMenu : MonoBehaviour
             mainMenuUI.SetActive(true);
         }
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && (SceneManager.GetActiveScene().name != "MainMenu"))
@@ -36,6 +43,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
@@ -54,6 +62,7 @@ public class PauseMenu : MonoBehaviour
     {
         gameOverMenuUI.SetActive(true);
         GameIsOver = true;
+        GameIsPaused = false;
     }
 
     public void LoadMenu()
@@ -71,12 +80,37 @@ public class PauseMenu : MonoBehaviour
 
     public void StartGame()
     {
+        SettingsIsDisplayed = false;
+        GameIsPaused = false;
         Player.playerHealth = 3;
         SceneManager.LoadScene("Room0");
     }
 
+    public void EnableCheats()
+    {
+        if (CheatsEnabled)
+        {
+            CheatsEnabled = false;
+            // change text
+        }
+        else
+        {
+            CheatsEnabled = true;
+            // change text
+        }
+    }
+
     public void DisplaySettings()
     {
-        Debug.Log("Display Settings");
+        if (SettingsIsDisplayed)
+        {
+            settingsUI.SetActive(false);
+            SettingsIsDisplayed = false;
+        }
+        else
+        {
+            SettingsIsDisplayed = true;
+            settingsUI.SetActive(true);
+        }
     }
 }

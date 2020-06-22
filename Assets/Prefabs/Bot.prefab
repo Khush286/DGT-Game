@@ -71,7 +71,6 @@ GameObject:
   - component: {fileID: 7060640995798761173}
   - component: {fileID: 7060640995798761161}
   - component: {fileID: 3491460476756268569}
-  - component: {fileID: 1749789451}
   m_Layer: 8
   m_Name: Bot
   m_TagString: Bot
@@ -224,19 +223,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.8
   rb: {fileID: 7060640995798761173}
---- !u!114 &1749789451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7060640995798761175}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90849b586aba241448cea5483acf3d22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 7060640995798761173}
-  animator: {fileID: 7060640995798761160}
-  health: 2

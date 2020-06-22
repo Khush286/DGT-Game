@@ -6,14 +6,16 @@ using UnityEngine.UI;
 
 public class miniMap : MonoBehaviour
 {
-    public string currentRoom = "";
+    public string currentRoom = ""; // The current game Scene
     string objectName = "";
+
     void Start()
     {
         objectName = gameObject.name;
         getCurrentRoom();
         changePanelColour();
     }
+
     public void getCurrentRoom()
     {
         currentRoom = SceneManager.GetActiveScene().name;

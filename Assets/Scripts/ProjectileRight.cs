@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProjectileRight : MonoBehaviour
 {
-    //public Rigidbody2D rb;
     void Update()
     {
         Invoke("DestroyProjectile", 2.0f);
@@ -15,5 +14,4 @@ public class ProjectileRight : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }

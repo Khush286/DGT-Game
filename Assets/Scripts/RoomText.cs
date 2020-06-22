@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class RoomText : MonoBehaviour
 {
-    string currentRoom = "";
+    string currentRoom = ""; // the current game scene
 
     private void Start()
     {

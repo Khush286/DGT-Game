@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class KeyTextScript : MonoBehaviour
 {
     Text text;
-    [SerializeField] public static int keyAmount;
-    // Start is called before the first frame update
+    [SerializeField] public static int keyAmount; // The Amount of keys the Player has
+
     void Start()
     {
         text = GetComponent<Text>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (keyAmount == 0)

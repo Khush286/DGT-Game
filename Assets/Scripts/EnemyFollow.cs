@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public float speed;
+    public float speed; // Speed of bot
     public Rigidbody2D rb;
-
-    private Transform target;
+    private Transform target; // Player to target
+    public int health = 2; // Health of the bot
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
+    public void changeHealth()
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            health -= 1;
+        }
     }
 
     void Update()

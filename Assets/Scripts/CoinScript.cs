@@ -12,8 +12,6 @@ public class CoinScript : MonoBehaviour
             Destroy(gameObject);
             
         }
-      
     }
-    
 }
  

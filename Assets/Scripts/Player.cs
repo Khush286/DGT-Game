@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public static int playerHealth = 3;
+    public static int playerHealth = 3; // The Players current health
     public Rigidbody2D rb;
     public GameObject menuUI;
 
@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
         if (playerHealth <= 0)
         {
             Destroy(gameObject);
-            // enter gameover menu
             menuUI.GetComponent<PauseMenu>().GameOver();
         }
     }
@@ -28,9 +27,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene("Room" + nextScene);
             KeyTextScript.keyAmount -= 1;
             Destroy(gameObject);
-
         }
-
         else if (other.tag == "LockedDoor" && CoinTextScript.coinAmount >= 30)
         {
             int nextScene = other.GetComponent<Door>().roomToAccess;
@@ -48,17 +45,24 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            KeyTextScript.keyAmount += 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            CoinTextScript.coinAmount += 1;
-        }
+        Cheats();
     }
 
+    private void Cheats()
+    {
+        if(PauseMenu.CheatsEnabled)
+        {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                KeyTextScript.keyAmount += 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                CoinTextScript.coinAmount += 1;
+            }
+        }
+    }
 
 
 

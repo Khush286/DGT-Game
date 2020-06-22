@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public GameObject projectile;
+    public GameObject projectile; // The projectile to shoot
     public Transform spellEmitterUp;
     public Transform spellEmitterDown;
     public Transform spellEmitterLeft;
     public Transform spellEmitterRight;
-    public float projectileSpeed = 12f;
+    public float projectileSpeed = 12f; // The speed of the projectile
 
     float timeLastShot = 0f;
     float delayBetweenShots = 0.8f;
@@ -46,7 +46,5 @@ public class Shooting : MonoBehaviour
             go.AddComponent<ProjectileRight>();
             go.AddComponent<ProjectileMain>();
         }   
-
     }
-
 }

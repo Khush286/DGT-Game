@@ -8,6 +8,12 @@ public class HeartsTextScript : MonoBehaviour
     private GameObject heart1;
     private GameObject heart2;
     private GameObject heart3;
+
+    void Update()
+    {
+        checkForHealthV2();
+    }
+
     void Start()
     {
         foreach (Transform t in transform)
@@ -25,12 +31,6 @@ public class HeartsTextScript : MonoBehaviour
                 heart3 = t.gameObject;
             }
         }
-    }
-
-    void Update()
-    {
-        //checkForHealth();
-        checkForHealthV2();
     }
 
     private void checkForHealthV2()
@@ -60,27 +60,4 @@ public class HeartsTextScript : MonoBehaviour
             heart3.SetActive(false);
         }
     }
-
-    //public static int playerHealth = 0;
-    /*private void checkForHealth()
-    {
-        foreach (Transform t in transform)
-        {
-            if (t.name == Player.playerHealth.ToString())
-            {
-                t.gameObject.SetActive(true);
-            } else { t.gameObject.SetActive(false); } 
-
-            if (t.name == Player.playerHealth.ToString())
-            {
-                t.gameObject.SetActive(true);
-            } else { t.gameObject.SetActive(false); } 
-
-            if (t.name == Player.playerHealth.ToString())
-            {
-                t.gameObject.SetActive(true);
-            } else { t.gameObject.SetActive(false); }
-
-        }
-    }*/
 }

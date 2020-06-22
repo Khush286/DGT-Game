@@ -10,19 +10,18 @@ public class ProjectileMain : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Walls")
+        if (other.tag == "Walls") // if the collider was a wall destroy projectile
         {
             DestroyProjectile();
         }
 
-        if (other.tag == "Bot")
+        if (other.tag == "Bot") // If the collider was a bot damage it
         {
-            other.GetComponent<BotMovement>().changeHealth();
+            other.GetComponent<EnemyFollow>().changeHealth();
             DestroyProjectile();
         }
-
     }
-
 }

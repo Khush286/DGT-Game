@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProjectileUp : MonoBehaviour
 {
-    //public Rigidbody2D rb;
     void Update()
     {
         Invoke("DestroyProjectile", 2.0f);

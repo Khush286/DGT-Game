@@ -256,12 +256,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a62cb3df69c0b9e4cb07808b7eabe04f, type: 3}
---- !u!50 &448538229 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7060640995798761173, guid: cd42995c4219b5c4b8dee8f133a2bf11,
-    type: 3}
-  m_PrefabInstance: {fileID: 1750238728}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &476823184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5272,15 +5266,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1749789451, guid: cd42995c4219b5c4b8dee8f133a2bf11, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491460476756268569, guid: cd42995c4219b5c4b8dee8f133a2bf11,
-        type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 448538229}
     - target: {fileID: 7060640995798761163, guid: cd42995c4219b5c4b8dee8f133a2bf11,
         type: 3}
       propertyPath: m_LocalPosition.x
