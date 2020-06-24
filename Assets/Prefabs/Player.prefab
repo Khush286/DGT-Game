@@ -305,6 +305,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7060640995798761173}
+  menuUI: {fileID: 0}
+  botsExist: 0
+  particleEffect: {fileID: 100000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
 --- !u!114 &939715474
 MonoBehaviour:
   m_ObjectHideFlags: 0

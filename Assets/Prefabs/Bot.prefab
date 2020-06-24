@@ -223,3 +223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.8
   rb: {fileID: 7060640995798761173}
+  health: 2
+  coin: {fileID: 1104976183828897566, guid: 06784f6a06abc4a49bcaf70745d6850b, type: 3}
+  key: {fileID: 285907055971550808, guid: a62cb3df69c0b9e4cb07808b7eabe04f, type: 3}

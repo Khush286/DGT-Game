@@ -14,8 +14,6 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsOver = false;
     public static bool SettingsIsDisplayed = false;
     public static bool CheatsEnabled = false;
-
-
 void Start()
     {
         settingsUI.SetActive(false);
@@ -29,7 +27,6 @@ void Start()
             mainMenuUI.SetActive(true);
         }
     }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && (SceneManager.GetActiveScene().name != "MainMenu"))
@@ -44,7 +41,6 @@ void Start()
             }
         }
     }
-
     public void Resume()
     {
         pauseMenuUI.SetActive(false);

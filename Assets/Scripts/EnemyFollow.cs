@@ -8,6 +8,8 @@ public class EnemyFollow : MonoBehaviour
     public Rigidbody2D rb;
     private Transform target; // Player to target
     public int health = 2; // Health of the bot
+    public GameObject coin;
+    public GameObject key;
 
     void Start()
     {
@@ -19,13 +21,19 @@ public class EnemyFollow : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            if (Random.Range(0, 1) == 1)
+            {
+                key = Instantiate(key, transform.position, transform.rotation);
+            } else
+            {
+                coin = Instantiate(coin, transform.position, transform.rotation);
+            }
         }
         else
         {
             health -= 1;
         }
     }
-
     void Update()
     {
         if (target != null)
@@ -36,5 +44,4 @@ public class EnemyFollow : MonoBehaviour
             }
         }
     }
-
 }
