@@ -128,22 +128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 450613868, guid: e5559738e811fb442bac927ed51373ad, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 679554842, guid: e5559738e811fb442bac927ed51373ad, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.0000076293945
-      objectReference: {fileID: 0}
-    - target: {fileID: 679554842, guid: e5559738e811fb442bac927ed51373ad, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -0.000015259
-      objectReference: {fileID: 0}
-    - target: {fileID: 679554844, guid: e5559738e811fb442bac927ed51373ad, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8805615418113902258, guid: e5559738e811fb442bac927ed51373ad,
         type: 3}
       propertyPath: m_Name

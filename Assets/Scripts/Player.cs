@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public static int playerHealth = 3; // The Players current health
     public Rigidbody2D rb;
     public GameObject menuUI;
+    private GameObject[] isThereBots;
 
     private void checkForHealth()
     {
@@ -18,6 +19,8 @@ public class Player : MonoBehaviour
             menuUI.GetComponent<PauseMenu>().GameOver();
         }
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -52,6 +55,10 @@ public class Player : MonoBehaviour
     {
         if(PauseMenu.CheatsEnabled)
         {
+            if (Input.GetKeyDown(KeyCode.J) && playerHealth <= 2 && playerHealth >= 1)
+            {
+                playerHealth += 1;
+            }
             if (Input.GetKeyDown(KeyCode.K))
             {
                 KeyTextScript.keyAmount += 1;
@@ -59,6 +66,15 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.L))
             {
                 CoinTextScript.coinAmount += 1;
+            }
+            var item = GameObject.FindGameObjectsWithTag("Bot");
+            if (item == null)
+            {
+                Debug.Log("returned null");
+            }
+            else if (item != null)
+            {
+                Debug.Log(item);
             }
         }
 
