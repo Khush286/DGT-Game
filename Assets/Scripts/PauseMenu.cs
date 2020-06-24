@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -14,9 +15,9 @@ public class PauseMenu : MonoBehaviour
     public static bool SettingsIsDisplayed = false;
     public static bool CheatsEnabled = false;
 
-    void Start()
+
+void Start()
     {
-        gameobject.transform.Find("Settings");
         settingsUI.SetActive(false);
         SettingsIsDisplayed = false;
         GameIsOver = (false);
@@ -91,17 +92,25 @@ public class PauseMenu : MonoBehaviour
         if (CheatsEnabled)
         {
             CheatsEnabled = false;
-            // change text
+            settingsUI.transform.Find("EnableCheatsButton").transform.Find("Text").GetComponent<Text>().text = "Enable Cheats: OFF";
         }
         else
         {
             CheatsEnabled = true;
-            // change text
+            settingsUI.transform.Find("EnableCheatsButton").transform.Find("Text").GetComponent<Text>().text = "Enable Cheats: ON";
         }
     }
 
     public void DisplaySettings()
     {
+        if (CheatsEnabled)
+        {
+            settingsUI.transform.Find("EnableCheatsButton").transform.Find("Text").GetComponent<Text>().text = "Enable Cheats: ON";
+        }
+        else
+        {
+            settingsUI.transform.Find("EnableCheatsButton").transform.Find("Text").GetComponent<Text>().text = "Enable Cheats: OFF";
+        }
         if (SettingsIsDisplayed)
         {
             settingsUI.SetActive(false);
