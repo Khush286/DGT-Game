@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
         if (playerHealth <= 0)
         {
             Destroy(gameObject);
-            menuUI.GetComponent<PauseMenu>().GameOver();
         }
     }
     private void SpawnParticleEffect(Vector2 spawnPosition)
@@ -35,7 +34,7 @@ public class Player : MonoBehaviour
             KeyTextScript.keyAmount -= 1;
             Destroy(gameObject);
         }
-        else if (other.tag == "LockedDoor" && CoinTextScript.coinAmount >= 30)
+        else if (other.tag == "LockedDoor" && CoinTextScript.coinAmount >= 30 && IsThisArrayEmpty())
         {
             int nextScene = other.GetComponent<Door>().roomToAccess;
             SceneManager.LoadScene("Room" + nextScene);

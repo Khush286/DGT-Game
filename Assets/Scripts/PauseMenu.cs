@@ -29,6 +29,7 @@ void Start()
     }
     void Update()
     {
+        checkForGameOver();
         if (Input.GetKeyDown(KeyCode.Escape) && (SceneManager.GetActiveScene().name != "MainMenu"))
         {
             if (GameIsPaused)
@@ -53,6 +54,14 @@ void Start()
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+    }
+    
+    public void checkForGameOver()
+    {
+        if (Player.playerHealth <= 0 && GameIsOver != true && GameIsPaused != true)
+        {
+            GameOver();
+        }
     }
 
     public void GameOver()
