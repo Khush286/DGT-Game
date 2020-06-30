@@ -21,13 +21,7 @@ public class EnemyFollow : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            if (Random.Range(0, 1) == 1)
-            {
-                key = Instantiate(key, transform.position, transform.rotation);
-            } else
-            {
-                coin = Instantiate(coin, transform.position, transform.rotation);
-            }
+            key = Instantiate(key, transform.position, transform.rotation);
         }
         else
         {
