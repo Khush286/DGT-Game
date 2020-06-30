@@ -28,7 +28,7 @@ void Start()
         }
     }
     void Update()
-    {
+    {   
         checkForGameOver();
         if (Input.GetKeyDown(KeyCode.Escape) && (SceneManager.GetActiveScene().name != "MainMenu"))
         {
@@ -58,7 +58,7 @@ void Start()
     
     public void checkForGameOver()
     {
-        if (Player.playerHealth <= 0 && GameIsOver != true && GameIsPaused != true)
+        if (Player.playerHealth <= 0 && GameIsOver != true && GameIsPaused != true && SceneManager.GetActiveScene().name != "MainMenu")
         {
             GameOver();
         }
@@ -75,6 +75,8 @@ void Start()
     {
         Time.timeScale = 1f;
         Debug.Log("Loading Menu...");
+        GameIsOver = (false);
+        gameOverMenuUI.SetActive(false);
         SceneManager.LoadScene("MainMenu");
     }
 
