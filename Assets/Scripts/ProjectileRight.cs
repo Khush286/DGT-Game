@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /****************************** Project Header ******************************\
-Script Name:  ProjectileUp
+Script Name:  ProjectileRight
 Project:      DGT-Game Dungeon Runner
 Author:       Khushwant Singh
 
