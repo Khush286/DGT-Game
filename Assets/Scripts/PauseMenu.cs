@@ -129,4 +129,28 @@ void Start()
             settingsUI.SetActive(true);
         }
     }
+
+    public void SaveGame()
+    {
+        PlayerPrefs.SetInt("Coins", CoinTextScript.coinAmount);
+        PlayerPrefs.SetInt("Keys", KeyTextScript.keyAmount);
+        PlayerPrefs.SetInt("CurrentHealth", Player.playerHealth);
+        PlayerPrefs.SetString("CurrentRoom", SceneManager.GetActiveScene().name);
+    }
+    public void LoadGame()
+    {
+        if(PlayerPrefs.GetInt("CurrentRoom") != 0)
+        {
+            CoinTextScript.coinAmount = PlayerPrefs.GetInt("Coins");
+            KeyTextScript.keyAmount = PlayerPrefs.GetInt("Keys");
+            Player.playerHealth = PlayerPrefs.GetInt("CurrentHealth");
+            SceneManager.LoadScene(PlayerPrefs.GetString("CurrentRoom"));
+            Resume();
+        }
+        // check if the saved active scene isn't main menu
+        Debug.Log("Coins: " + PlayerPrefs.GetInt("Coins"));
+        Debug.Log("Keys: " + PlayerPrefs.GetInt("Keys"));
+        Debug.Log("CurrentHealth: " + PlayerPrefs.GetInt("CurrentHealth"));
+        Debug.Log("CurrentRoom: " + PlayerPrefs.GetString("CurrentRoom"));
+    }
 }

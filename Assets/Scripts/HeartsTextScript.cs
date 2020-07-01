@@ -11,7 +11,7 @@ public class HeartsTextScript : MonoBehaviour
 
     void Update()
     {
-        checkForHealthV2();
+        checkForHealth();
     }
 
     void Start()
@@ -33,7 +33,7 @@ public class HeartsTextScript : MonoBehaviour
         }
     }
 
-    private void checkForHealthV2()
+    private void checkForHealth()
     {
         if ( Player.playerHealth == 3)
         {
