@@ -1,6 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
+/****************************** Project Header ******************************\
+Script Name:  ParticleEffectHit
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Handles the functions of the Particles effect.
+
+\***************************************************************************/
+
 [RequireComponent(typeof(ParticleSystem))]
 public class ParticleEffectHit : MonoBehaviour
 {

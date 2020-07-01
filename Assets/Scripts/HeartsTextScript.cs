@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/****************************** Project Header ******************************\
+Script Name:  HeartsTextScript
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Handles the displaying of the amount of hearts the player has.
+
+\***************************************************************************/
+
 public class HeartsTextScript : MonoBehaviour
 {
     private GameObject heart1;

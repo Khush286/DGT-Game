@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/****************************** Project Header ******************************\
+Script Name:  ParticleEffect
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Handles when the particle effect will be triggered(On Enemies and Walls).
+
+\***************************************************************************/
+
 public class ParticleEffect : MonoBehaviour
 {
     public GameObject particleEffect;

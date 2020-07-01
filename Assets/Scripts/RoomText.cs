@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/****************************** Project Header ******************************\
+Script Name:  RoomText
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Displays the current Unity Scene your in as text.
+
+\***************************************************************************/
 
 public class RoomText : MonoBehaviour
 {

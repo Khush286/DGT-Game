@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/****************************** Project Header ******************************\
+Script Name:  EnemyFollow
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Handles the Enemies 'AI', and health.
+
+\***************************************************************************/
+
 public class EnemyFollow : MonoBehaviour
 {
     public float speed; // Speed of bot

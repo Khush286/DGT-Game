@@ -4,6 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/****************************** Project Header ******************************\
+Script Name:  miniMapIndicator
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Displays the Mini-Map, Holds the panels in an Array and finds the corresponding panel
+for what room the Player is currently in, then changes the colour of that panel.
+
+\***************************************************************************/
+
 public class miniMapIndicator : MonoBehaviour
 {
     public string currentRoom = ""; // The current game Scene

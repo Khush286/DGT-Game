@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/****************************** Project Header ******************************\
+Script Name:  Shooting
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Handles the players shooting mechanic, instantiates projectiles.
+
+\***************************************************************************/
+
 public class Shooting : MonoBehaviour
 {
     public GameObject projectile; // The projectile to shoot
