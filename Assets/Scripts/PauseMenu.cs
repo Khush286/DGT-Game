@@ -4,6 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/****************************** Project Header ******************************\
+Script Name:  PauseMenu
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Handles all of the User Interface and saving/loading.
+
+\***************************************************************************/
+
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI; // UI for pausing
@@ -150,10 +159,5 @@ void Start()
             SceneManager.LoadScene(PlayerPrefs.GetString("CurrentRoom"));
             Resume();
         }
-        // check if the saved active scene isn't main menu
-        Debug.Log("Coins: " + PlayerPrefs.GetInt("Coins"));
-        Debug.Log("Keys: " + PlayerPrefs.GetInt("Keys"));
-        Debug.Log("CurrentHealth: " + PlayerPrefs.GetInt("CurrentHealth"));
-        Debug.Log("CurrentRoom: " + PlayerPrefs.GetString("CurrentRoom"));
     }
 }

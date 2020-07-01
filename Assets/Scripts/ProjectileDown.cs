@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/****************************** Project Header ******************************\
+Script Name:  ProjectileDown
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Intended for a projectile moving downwards.
+
+\***************************************************************************/
+
 public class ProjectileDown : MonoBehaviour
 {
     void Update()

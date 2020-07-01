@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/****************************** Project Header ******************************\
+Script Name:  PlayerMovement
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Handles the movement of the Player.
+
+\***************************************************************************/
+
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f; // Players movement speed

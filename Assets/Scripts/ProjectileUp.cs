@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/****************************** Project Header ******************************\
+Script Name:  ProjectileUp
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Intended for a projectile moving upwards.
+
+\***************************************************************************/
+
 public class ProjectileUp : MonoBehaviour
 {
     void Update()

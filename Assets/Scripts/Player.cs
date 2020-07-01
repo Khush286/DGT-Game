@@ -4,6 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/****************************** Project Header ******************************\
+Script Name:  Player
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Handles the players interaction with the gamespace and Cheating if it's enabled.
+
+\***************************************************************************/
+
 public class Player : MonoBehaviour
 {
     public static int playerHealth = 3; // The Players current health

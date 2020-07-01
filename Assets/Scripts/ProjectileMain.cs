@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/****************************** Project Header ******************************\
+Script Name:  ProjectileMain
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Intended for general projectiles in the game
+
+\***************************************************************************/
+
 public class ProjectileMain : MonoBehaviour
 {
     private int changeHealth;

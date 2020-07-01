@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/****************************** Project Header ******************************\
+Script Name:  ProjectileLeft
+Project:      DGT-Game Dungeon Runner
+Author:       Khushwant Singh
+
+Intended for a projectile moving to the left.
+
+\***************************************************************************/
+
 public class ProjectileLeft : MonoBehaviour
 {
     void Update()
