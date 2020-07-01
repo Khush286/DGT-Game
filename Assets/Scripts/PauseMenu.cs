@@ -91,6 +91,8 @@ void Start()
         SettingsIsDisplayed = false;
         GameIsPaused = false;
         Player.playerHealth = 3;
+        KeyTextScript.keyAmount = 0;
+        CoinTextScript.coinAmount = 0;
         SceneManager.LoadScene("Room0");
     }
 
@@ -136,10 +138,11 @@ void Start()
         PlayerPrefs.SetInt("Keys", KeyTextScript.keyAmount);
         PlayerPrefs.SetInt("CurrentHealth", Player.playerHealth);
         PlayerPrefs.SetString("CurrentRoom", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
     }
     public void LoadGame()
     {
-        if(PlayerPrefs.GetInt("CurrentRoom") != 0)
+        if(PlayerPrefs.GetString("CurrentRoom") != "MainMenu")
         {
             CoinTextScript.coinAmount = PlayerPrefs.GetInt("Coins");
             KeyTextScript.keyAmount = PlayerPrefs.GetInt("Keys");

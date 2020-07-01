@@ -27,14 +27,14 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Door" && KeyTextScript.keyAmount >= 1 && IsThisArrayEmpty())
+        if (other.tag == "Door" && KeyTextScript.keyAmount >= 1 && IsThisArrayEmpty(checkForBots))
         {
             int nextScene = other.GetComponent<Door>().roomToAccess;
             SceneManager.LoadScene("Room" + nextScene);
             KeyTextScript.keyAmount -= 1;
             Destroy(gameObject);
         }
-        else if (other.tag == "LockedDoor" && CoinTextScript.coinAmount >= 30 && IsThisArrayEmpty())
+        else if (other.tag == "LockedDoor" && CoinTextScript.coinAmount >= 30 && KeyTextScript.keyAmount >= 1 && IsThisArrayEmpty(checkForBots))
         {
             int nextScene = other.GetComponent<Door>().roomToAccess;
             SceneManager.LoadScene("Room" + nextScene);
@@ -45,25 +45,31 @@ public class Player : MonoBehaviour
         {
             playerHealth -= 1;
             SpawnParticleEffect(other.gameObject.transform.position);
-            Destroy(other.transform.parent.gameObject);
-            Debug.Log(playerHealth);
+            other.GetComponentInParent<EnemyFollow>().health = 0;
+            other.GetComponentInParent<EnemyFollow>().changeHealth();
             checkForHealth();
         }
+        else if (other.name == "HeartItem")
+        {
+            playerHealth += 1;
+            Destroy(other.gameObject);
+        }
+    }
+
+    private bool IsThisArrayEmpty(Array array)
+    {
+        if (array == null || array.Length == 0)
+        {
+            return true;
+        }
+        else { return false; }
     }
     void Update()
     {
         Cheats();
         checkForBots = GameObject.FindGameObjectsWithTag("Bot");
     }
-    private bool IsThisArrayEmpty()
-    {
-        if (checkForBots == null || checkForBots.Length == 0)
-        {
-            return true;
 
-        } else { return false; }
-
-    }
     private void Cheats()
     {
         if(PauseMenu.CheatsEnabled)
@@ -80,11 +86,11 @@ public class Player : MonoBehaviour
             {
                 CoinTextScript.coinAmount += 1;
             }
-            if (Input.GetKeyDown(KeyCode.H) && IsThisArrayEmpty())
+            if (Input.GetKeyDown(KeyCode.H) && IsThisArrayEmpty(checkForBots))
             {
                 Debug.Log("if");
             }
-            else if (Input.GetKeyDown(KeyCode.H) && !IsThisArrayEmpty())
+            else if (Input.GetKeyDown(KeyCode.H) && !IsThisArrayEmpty(checkForBots))
             {
                 Debug.Log("else if");
             }

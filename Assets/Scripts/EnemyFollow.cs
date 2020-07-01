@@ -10,6 +10,7 @@ public class EnemyFollow : MonoBehaviour
     public int health = 2; // Health of the bot
     public GameObject coin;
     public GameObject key;
+    private GameObject[] checkForBots;
 
     void Start()
     {
@@ -20,8 +21,17 @@ public class EnemyFollow : MonoBehaviour
     {
         if (health <= 0)
         {
+            Debug.Log(checkForBots.Length);
             Destroy(gameObject);
-            key = Instantiate(key, transform.position, transform.rotation);
+            if (checkForBots.Length == 1)
+            {
+                key = Instantiate(key, transform.position, transform.rotation);
+            }
+            else
+            {
+                coin = Instantiate(coin, transform.position, transform.rotation);
+            }
+
         }
         else
         {
@@ -30,6 +40,7 @@ public class EnemyFollow : MonoBehaviour
     }
     void Update()
     {
+        checkForBots = GameObject.FindGameObjectsWithTag("Bot");
         if (target != null)
         {
             if (Vector2.Distance(transform.position, target.position) > 0.6)
