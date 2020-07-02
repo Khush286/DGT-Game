@@ -141,6 +141,15 @@ void Start()
         }
     }
 
+    public void DeleteSaveFile()
+    {
+        PlayerPrefs.SetInt("Coins", 0);
+        PlayerPrefs.SetInt("Keys", 0);
+        PlayerPrefs.SetInt("CurrentHealth", 3);
+        PlayerPrefs.SetString("CurrentRoom", "Room0");
+        PlayerPrefs.Save();
+    }
+
     public void SaveGame()
     {
         PlayerPrefs.SetInt("Coins", CoinTextScript.coinAmount);

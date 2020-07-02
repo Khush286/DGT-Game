@@ -19,7 +19,7 @@ public class miniMapIndicator : MonoBehaviour
     public string currentRoom = ""; // The current game Scene
     int value = 0;
     public Transform[] childs;
-    public GameObject[] childObjects;
+    public GameObject[] childObjects; // Array to hold the panels
 
     void Start()
     {

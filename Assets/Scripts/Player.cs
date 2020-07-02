@@ -34,21 +34,22 @@ public class Player : MonoBehaviour
         GameObject Particle = Instantiate(particleEffect, spawnPosition, Quaternion.identity) as GameObject;
         Destroy(Particle, 3);
     }
+
+    private void DoorInteraction(int roomToAccess)
+    {
+        SceneManager.LoadScene("Room" + roomToAccess);
+        KeyTextScript.keyAmount -= 1;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Door" && KeyTextScript.keyAmount >= 1 && IsThisArrayEmpty(checkForBots))
         {
-            int nextScene = other.GetComponent<Door>().roomToAccess;
-            SceneManager.LoadScene("Room" + nextScene);
-            KeyTextScript.keyAmount -= 1;
-            Destroy(gameObject);
+            DoorInteraction(other.GetComponent<Door>().roomToAccess);
         }
         else if (other.tag == "LockedDoor" && CoinTextScript.coinAmount >= 30 && KeyTextScript.keyAmount >= 1 && IsThisArrayEmpty(checkForBots))
         {
-            int nextScene = other.GetComponent<Door>().roomToAccess;
-            SceneManager.LoadScene("Room" + nextScene);
-            KeyTextScript.keyAmount -= 1;
-            Destroy(gameObject);
+            DoorInteraction(other.GetComponent<Door>().roomToAccess);
+
         }
         else if (other.name == "PlayerCollider")
         {
@@ -58,7 +59,7 @@ public class Player : MonoBehaviour
             other.GetComponentInParent<EnemyFollow>().changeHealth();
             checkForHealth();
         }
-        else if (other.name == "HeartItem")
+        else if (other.name == "HeartItem" && playerHealth != 3)
         {
             playerHealth += 1;
             Destroy(other.gameObject);
